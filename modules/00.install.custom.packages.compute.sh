@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
-amazon-linux-extras enable python3.8
-yum install wget tmux python38 glances htop hwloc iftop kernel-tools numactl python3-devel python38-devel kernel-devel check check-devel subunit subunit-devel -y
-yum groupinstall -y 'Development Tools'
+apt update
+apt install software-properties-common
+add-apt-repository -y ppa:deadsnakes/ppa
+apt install -y build-essentials
+apt install -y autoconf automake gdb git libffi-dev zlib1g-dev libssl-dev
+apt install -y python3.9 wget tmux glances htop hwloc iftop numactl python3.9-dev check subunit
