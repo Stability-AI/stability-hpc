@@ -240,8 +240,8 @@ Host sai-*
 # for mac users, UseKeychain will save your password in the keychain
 # replace the <privkey> above with your home computer cluster private key
 
-Host sai-jumphost-int
-    HostName westint1.hpc.stability.ai
+Host sai-jumphost-intcpu
+    HostName intcpu.hpc.stability.ai
     User \$USER
     Port 22
 # ==========================end permanent==========================
@@ -251,7 +251,7 @@ Host sai-vscode-direct
     Hostname \$1
     User \$USER
     Port \$2
-    ProxyJump jumphost-int
+    ProxyJump sai-jumphost-intcpu
     UserKnownHostsFile=/dev/null
     StrictHostKeyChecking no
 # make sure to match the proxyjump host name with the name of the second entry above
