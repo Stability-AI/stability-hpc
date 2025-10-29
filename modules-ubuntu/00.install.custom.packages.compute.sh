@@ -1,6 +1,6 @@
 #!/bin/bash
 set -x
-set -e
+#set -e
 
 installCustom() {
     #set precedence for IPv4 over IPv6
